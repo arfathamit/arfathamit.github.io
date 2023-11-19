@@ -26,12 +26,15 @@ font-size: 14px;
 /* unvisited link */
 a:link {
     color: rgb(115, 0, 10);
+    text-decoration: none;
 }
 
 /* visited link */
 a:visited {
-color: rgb(115, 0, 10);
+    color: rgb(115, 0, 10);
+    text-decoration: none;
 }
+
 
 /* mouse over link */
 a:hover {
