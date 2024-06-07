@@ -20,7 +20,7 @@ button{
 }
 
 p {
-font-size: 14px;
+font-size: 15px;
 }
 
 /* unvisited link */
@@ -57,3 +57,9 @@ color: red;
     display: block;
     margin-bottom: 0.2em;
 }
+
+/* med break */
+.brmedium { 
+    display: block; 
+    margin-bottom: 2em; 
+} 
