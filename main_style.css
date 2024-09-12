@@ -9,6 +9,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* constant positioning */
+html {
+    scrollbar-gutter: stable;
+}
+
 h4 {
     color: black;
     margin-bottom: 0
