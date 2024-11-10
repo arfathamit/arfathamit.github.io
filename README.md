@@ -1,1 +1,2 @@
-Aerfate Haimiti's personal website
+Personal Website
+Aerfate Haimiti (Arfat Hamit)
