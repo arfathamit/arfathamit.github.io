@@ -1,3 +1,3 @@
-Personal Website\
+Personal Website
 
 Aerfate Haimiti (Arfat Hamit)
