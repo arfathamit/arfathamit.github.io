@@ -8,16 +8,19 @@
     <body bgcolor=white text=black>
     
     <style>
-        /* change the "Abstract" links color */
-        .toggle-abstract {
-            color: rgb(0, 0 , 0) !important; /* !important: override other styles */
+        /* change the "Abstract" and "Project Status" links color */
+        .toggle-abstract,
+        .toggle-status {
+            color: rgb(0, 0, 0) !important; /* force black by default */
             cursor: pointer; /* Makes the link look clickable */
-        }
-        /* CSS for when the mouse is over the link */
-        .toggle-abstract:hover {
-            color: red !important; /* Different color on hover rgb(75, 156, 211) */
+            text-decoration: none;
         }
 
+        /* CSS for when the mouse is over the link */
+        .toggle-abstract:hover,
+        .toggle-status:hover {
+            color: red !important; /* change to red on hover */
+        }
     </style>
 
     <center><h2> <a href="../" style="text-decoration:none;color:black;">Aerfate Haimiti  (Arfat Hamit)</a>  </h2></center>
@@ -43,7 +46,7 @@
     </li>
 
     <li>
-        <b><a target="_blank" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4640883">"Regional Price Indexes and Stimulus Payments Allocation"</a></b>, revise and resubmit, <br> <i>Regional Science and Urban Economics</i>
+        <b><a target="_blank" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4640883">"Regional Price Indexes and Stimulus Payments Allocation"</a></b> (under review)
         <p><a href="javascript:void(0);" class="toggle-abstract">[Abstract]</a></p>
         <p class="abstract" style="display:none;">Abstract: In this paper, I develop regional and income group-specific price indexes by estimating demand functions derived from a model of consumer choice with non-homothetic preferences using detailed barcode-level and household survey data. To illustrate the importance of differences in the cost of living across US households on the real impacts of the federal tax and transfer system, this paper examines a counterfactual policy that adjusts the 2020 stimulus payments based on regional and household group-specific price indices. The results reveal significant variation in the real impact of stimulus payments. For example, to have the same real impact, the nominal value of a stimulus payment to a household in California would need to be about two and a half times the amount as a payment to a household with the same income but living in Arkansas.</p>
     </li>
@@ -52,6 +55,12 @@
         <b><a target="_blank" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4964625">"Uniform Brand Variant Pricing and Cost Pass-Through to Retail Prices"</a></b> (under review), with <a target="_blank" href="https://sites.google.com/view/dannakang/home">Danna Thomas</a>
         <p><a href="javascript:void(0);" class="toggle-abstract">[Abstract]</a></p>
         <p class="abstract" style="display:none;">Abstract: We show that price uniformity is prevalent within stores and across products of the same brand, termed uniform brand variant pricing. We then study how this impacts input cost pass-through by developing a simple theoretical framework that we use to inform empirical pass-through models. We find that (1) cost pass-through for all inputs is identical across all brand variants, (2) cost pass-through for inputs contained in all brand variants is higher than cost pass-through for inputs used in only a subset of brand variants, and (3) input cost pass-through increases as the share of brand variants containing that input increases.</p>
+    </li>
+
+    <li>
+        <b><a target="_blank" href="">"Learning from 25 Years of Changes in Business Tax Policy"</a></b> (draft coming soon), with <a target="_blank" href="https://jasondebacker.com/">Jason DeBacker</a>
+        <p><a href="javascript:void(0);" class="toggle-abstract">[Abstract]</a></p>
+        <p class="abstract" style="display:none;">Abstract forthcoming.</p>
     </li>
 
 </ul>
@@ -68,24 +77,35 @@
     <li>
         <b><a href="../files/work_in_progress/TaxMult_draft.pdf">"Tax Multipliers in a DSGE Model"</a></b>, with <a target="_blank" href="https://jasondebacker.com/">Jason DeBacker</a> and <a target="_blank" href="https://sites.google.com/site/rickecon">Richard W. Evans</a>
         <p><a href="javascript:void(0);" class="toggle-abstract">[Abstract]</a></p>
+        <p class="abstract" style="display:none;">Abstract: Consumption taxes have long been favored by tax economists for their relative efficiency compared with taxes on capital and labor. This paper examines the stabilization properties of tax cuts within a DSGE framework. In addition to consumption taxes, the model incorporates other tax instruments, including investment tax credits and changes to expensing and depreciation policies. We provide the first quantitative insights into the size of the multipliers associated with tax cuts that directly target consumption and investment. (Preliminary. Project status: expanding the model.)</p>
+    </li>
+
+    <li> 
+        "Internet Infrastructure and Patterns of Trade" (draft coming soon), with 
+        <a href="https://www.haukeconomics.com/" target="_blank">William Hauk</a> and 
+        <a href="https://www.mohammadjakaria.com/home/" target="_blank">Mohammad Jakaria</a>
+        <p><a href="javascript:void(0);" class="toggle-abstract">[Abstract]</a></p>
         <p class="abstract" style="display:none;">Abstract forthcoming.</p>
     </li>
 
     <li> 
-        "Internet Infrastructure and Patterns of Trade", with 
-        <a href="https://www.haukeconomics.com/" target="_blank">William Hauk</a> and 
-        <a href="https://www.mohammadjakaria.com/home/" target="_blank">Mohammad Jakaria</a>
-    </li>
-
-    <li> 
         "Optimal Allocation of Trade Adjustment Assistance" 
+        <p><a href="javascript:void(0);" class="toggle-status">[Project Status]</a></p>
+        <p class="status" style="display:none;">Modeling.</p>
     </li>
 
     <li> 
         "Fiscal Policy and Local Imperfect Competition" 
+        <p><a href="javascript:void(0);" class="toggle-status">[Project Status]</a></p>
+        <p class="status" style="display:none;">Modeling.</p>
     </li>
 
-
+    <li> 
+        "Cost of Living, Fiscal Transfers, and Consumption" 
+        <p><a href="javascript:void(0);" class="toggle-status">[Project Status]</a></p>
+        <p class="status" style="display:none;">Writting. </p> 
+    </li>
+    
     </ul>
 
     
@@ -104,6 +124,20 @@
         });
     </script>
 
+    <script>
+        document.querySelectorAll('.toggle-status').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var status = this.parentElement.nextElementSibling;
+                if (status.style.display === 'none') {
+                    status.style.display = 'block';
+                    this.textContent = '[Hide Project Status]';
+                } else {
+                    status.style.display = 'none';
+                    this.textContent = '[Project Status]';
+                }
+            });
+        });
+    </script>
 
     <br>
     <br>
