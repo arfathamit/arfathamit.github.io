@@ -71,14 +71,18 @@ color: red;
 } 
 
         
-/* Adjust spacing for all list items */
+/*===== research page compact spacing =====*/
+
+/* list item block spacing */
 ul li {
     line-height: 1.5;
-    margin-bottom: 18px; /* Space below each list item */
+    margin-bottom: 18px;
 }
 
-/* Adjust spacing between list item and text below */
+/* spacing for text blocks inside list items */
 ul li p {
     line-height: 1.2;
-    margin-top: 8px; /* Space above the abstract text */
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
